@@ -1,0 +1,488 @@
+1.c hello world program
+
+#include<stdio.h>
+main()
+{
+printf("hello world\n");
+}
+
+
+----------------------
+2. c program to print a integer entered by a user
+ 
+#include<stdio.h>
+main()
+{
+ int a;
+ printf("enter a integer : ");
+ scanf("%d",&a);
+ printf("integer entered by the user is %d ",a);
+}
+---------------------------------------------------------
+3. c program to add two integers
+
+#include<stdio.h>
+main()
+{
+ int a,b,c;
+ printf("enter the values of a and b:\n");
+ scanf("%d%d",&a&b);
+ c = a+b;
+ printf("addition of two integers is %d",c);
+}
+-----------------------------------------------------------
+4. c program to find ASCII value of a character
+
+#include<stdio.h>
+main()
+{
+ char ch;
+ printf("enter the character :\n");
+ scanf("%c",&ch);
+ printf("the ASCII value of a character is %d",ch);
+}
+
+output:
+enter the character :
+f
+the ASCII value of a character is 102
+----------------------------------------------------------
+5.c program to find quotient and remainder of two integer entered by user
+
+#include<stdio.h>
+main()
+{
+ int a,b;
+ printf("enter values of a and b: \n");
+ scanf("%d %d",&a,&b);
+ printf("quotient of two integers is %d",a/b);
+ printf("remainder of two integers is %d",a%b);
+}
+
+
+enter values of a and b: 
+50
+5
+quotient of two integers is 10
+remainder of two integers is 0
+--------------------------------------------------------------
+6.c program to swap two numbers
+#include<stdio.h>
+main()
+{
+ int a=10,b=15,temp;
+ printf(" before swapping a= %d b=%d\n",a,b);
+ temp=a; 
+ a=b;
+ b=temp;
+ printf("after swapping a= %d b=%d",a,b);
+}
+
+before swapping a= 10 b=15
+ after swapping a= 15 b=10
+-------------------------------------------------------------------
+7. c program to swap without using temporary variable
+#include<stdio.h>
+main()
+{
+ int x=15,y=5;
+ printf("before swapping x = %d and y = %d\n",x,y);
+ x=x+y;
+ y=x-y;
+ x=x-y;
+ printf("after swapping x = %d and y = %d",x,y);
+}
+
+before swapping x = 15 and y = 5
+after swapping x = 5 and y = 15
+
+---------------------------------------------------------
+8. another way of above program :
+#include<stdio.h>
+main()
+{
+ int x=15,y=5;
+ printf("before swapping x = %d and y = %d\n",x,y);
+ x=x*y;
+ y=x/y;
+ x=x/y;
+ printf("after swapping x = %d and y = %d",x,y);
+}
+
+before swapping x = 15 and y = 5
+after swapping x = 5 and y = 15
+-----------------------------------------------------------------
+9. c program to check whether a number is even or odd
+#include<stdio.h>
+-------------------------------------------------
+10.c program for converting decimal number to octal equivalent number
+#include<stdio.h>
+main()
+{
+
+int num=10;
+printf ("Octal equivalent of decimal %d = %o", num,num) ;
+} 
+
+Octal equivalent of decimal 10 = 12
+----------------------------------------------------------------
+11.c program for converting decimal number to hexadecimal equivalent number
+#include<stdio.h>
+main()
+{
+
+int num=10;
+printf ("hexadecimal equivalent of decimal %d = %x", num,num) ;
+} 
+
+hexadecimal equivalent of decimal 10 = a
+----------------------------------------------------------------
+12.c program for characterI/O using getchar() and putchar()
+#include<stdio.h>
+main()
+{
+ int ch;
+ printf("enter the character :\n");
+ ch = getchar()
+ printf("the entered character is:\n" );
+ putchar(ch);
+} 
+
+ 
+enter the character :
+k
+the entered character is:
+k
+--------------------------------------------------------------------
+13. Program for integer arithmetic operation
+#include<stdio.h>
+main()
+{
+int a=17,b=4;
+printf("Sum = %d \ n" , a +b);
+ptintf("Difference = %d\n",a-b);
+printf ("Product = %d\n", a*b);
+printf("Quotient = %d\n",a/b);
+printf ("Remainder = %d\n", a%b);
+} 
+
+Sum = 21
+Difference = 13
+Product = 68
+Quotient = 4
+Remainder = 1
+----------------------------------------------------------------------
+14.Program to print the larger of two numbers using conditional operator
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a,b,max;
+    printf("enter the values of a and b:\n");
+    scanf("%d%d",&a,&b);
+    max = (a>b) ? a:b;
+    printf("larger of %d and %d is %d\n",a,b,max);
+
+    return 0;
+}
+
+
+enter the values of a and b:
+8
+9
+larger of 8 and 9 is 9
+-----------------------------------------------------------------------------
+15.program for type conversion
+
+#include <stdio.h>
+main()
+{
+    int i1,i2;
+    float f1,f2;
+    char c1,c2;
+    i1=80.34;
+    f2=12.45;
+    c1='H';
+    c2 = i1;
+    i2 = f1;
+    printf("c2 = %c and i2 = %d",c2,i2);
+}
+
+c2 = P and i2 = 0
+------------------------------------------------------------------------------------
+16.program for use of cast operator
+#include<stdio.h>
+main()
+{
+int x=5,y=2;
+float p,q;
+p=x/y;
+printf("p = %f\n",p);
+q=(float)x/y;
+printf("q = %f\n",q);
+}
+
+p = 2.000000
+q = 2.500000
+-----------------------------------------------------------------------
+17.write a program to solve the expression y = m*x+b
+#include<stdio.h>
+main()
+{
+    int y,m,x,b;
+    printf("enter the values of m,x,b:\n");
+    scanf("%d %d %d",&m,&x,&b);
+    y=m*x+b;
+    printf("the value of y = %d",y);
+}
+
+enter the values of m,x,b:
+6
+5
+8
+the value of y = 38
+--------------------------------------------------------------------
+18.assume x=5 and y=2 compute the following expressions
+x&&y
+x&y
+x||y
+x|y is true or false
+
+#include<stdio.h>
+main()
+{
+    int x=5,y=2;
+    printf("x&&y = %d\n",x&&y);
+    printf("x&y = %d\n",x&y);
+    printf("x||y = %d\n",x||y);
+    printf("x|y = %d\n",x|y);
+    
+}
+
+x&&y = 1
+x&y = 0
+x||y = 1
+x|y = 7
+--------------------------------------------------------------------
+19. check the values of x (x<5) ? y=1:y=0
+#include<stdio.h>
+main()
+{
+   int x,y;
+   printf("enter the values of x:\n");
+   scanf("%d",&x);
+   (x<5) ? (y=1):(y=0);
+   printf("value of y is %d",y);
+    
+}
+
+enter the values of x:
+8
+value of y is 0
+---------------------------------------------------------------------
+20.c program to check whether a number is even or odd
+#include<stdio.h>
+main()
+{
+   int x;
+   printf("enter value of x: ");
+   scanf("%d",&x);
+   if(x%2==0)
+   printf("number is even %d",x);
+   else 
+   printf("number is odd %d",x);
+    
+}
+
+enter value of x: 7
+number is odd 7
+------------------------------------------------------------
+21.find the largest number among three numbers entered by user
+#include<stdio.h>
+main()
+{
+   int x,y,z;
+   printf("enter value of x,y,z:\n ");
+   scanf("%d %d %d",&x,&y,&z);
+   if(x>y)
+   printf("x is lagre %d",x);
+   else if(y>z) 
+   printf("y is large %d",y);
+   else
+   printf("z is large %d",z);
+    
+}
+
+enter value of x,y,z:
+ 5
+ 9
+ 2
+ y is large 9
+------------------------------------------------------------------------------------
+22.leap year or not
+#include<stdio.h>
+main()
+{
+   int year;
+   printf("enter the year");
+   scanf("%d",&year);
+ if((year%4==0) && (year%100!=0)||(year%400==0))
+ printf("year is leap");
+ else 
+ printf("year is non leap");
+}
+
+enter the year2003
+year is non leap
+---------------------------------------------------------------------------
+23. find sum of natural numbers using while loop
+#include<stdio.h>
+main()
+{
+   int num,sum = 0,rem;
+   printf("enter the number:\n");
+   scanf("%d",&num);
+   while(num>0)
+   { 
+       rem = num%10;  //taking last digit
+       sum+=rem;
+       num/=10;         //skipping last digit
+   }
+   printf("sum of digits is %d",sum);
+}
+
+enter the number:
+1234
+sum of digits is 10
+--------------------------------------------------------
+24.find the sum of natural numbers using for loop
+#include<stdio.h>
+main()
+{
+   int num,sum = 0,i;
+   printf("enter the number:\n");
+   scanf("%d",&num);
+   for(i=1;i<=num;++i)
+   {
+   sum+=i;
+   }
+   printf("sum of digits is %d",sum);
+}
+
+enter the number:
+4
+sum of digits is 10
+------------------------------------------------------------
+25.find factorial of a number
+#include<stdio.h>
+main()
+{
+   int fact=1,i,n;
+   printf("enter the factorial value:\n");
+   scanf("%d",&n);
+   for(i=1;i<=n;i++)
+   {
+       fact=fact*i;
+   }
+   printf("factorial value is %d",fact);
+}
+
+enter the factorial value:
+5
+factorial value is 120
+-------------------------------------------------------------
+26.generate multiplication table
+#include<stdio.h>
+main()
+{
+   int i,n;
+   printf("enter the number :");
+   scanf("%d",&n);
+   for(i=1;i<=10;++i)
+   printf("%d*%d is %d\n",n,i,n*i);
+}
+enter the number :5
+5*1 is 5
+5*2 is 10
+5*3 is 15
+5*4 is 20
+5*5 is 25
+5*6 is 30
+5*7 is 35
+5*8 is 40
+5*9 is 45
+5*10 is 50
+----------------------------------------------------
+27.display fibonacci series
+#include<stdio.h>
+main()
+{
+    int n,i,x=0,y=1,z;
+    printf("enter the number of terms:");
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
+    {
+        printf("%d",x);
+        z=x+y;
+        x=y;
+        y=z;
+    }
+}
+enter the number of terms:7
+011235813
+-----------------------------------------------------------
+28.check number is palindrome or not
+#include<stdio.h>
+main()
+{
+  int n,rev=0,rem,ori;
+  printf("enter an integer:");
+  scanf("%d",&n);
+  ori = n;
+  while(n!=0)
+  { 
+      rem = n%10;
+      rev = rev*10+rem;
+      n/=10;
+  }
+
+  if(ori=rev)
+  	printf("%d is palindrome ",ori);
+  else 
+  	printf("%d is not palindrome",ori);
+}
+
+
+
+#include<stdio.h>
+#include<math.h>
+main()
+{
+  int n,rem,i=0,palin = 0,num;
+  printf("enter the number:");
+  scanf("%d",&n);
+  num = n;
+  while(n>0)
+  {
+      rem = n%10;
+      n/=10;
+      palin = palin+rem*pow(10,i);
+      i++;
+
+  }
+  if(num == palin)
+  printf("number is palindrome");
+  else
+  printf("number is  not palindrome");
+}
+
+enter the number:12343
+number is palindrome
+----------------------------------------------------------
+
+
+
+
+
+
+
