@@ -1,3 +1,4 @@
+//bitwise And - bit is on or off
 #include<stdio.h>
 int main()
 {
