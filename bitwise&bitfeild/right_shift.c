@@ -9,3 +9,8 @@ int main()
 	printf("%d\t",a);
 return 0;
 }
+/*output:
+enter the value of a:
+5
+5
+20*/
