@@ -12,3 +12,8 @@ int main()
 	printf("5th bit is %d\n",bit);
 return 0;
 }
+/*output:
+enter an integer
+5
+5
+5th bit is 0*/
