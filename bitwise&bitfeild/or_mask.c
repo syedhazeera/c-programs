@@ -1,3 +1,4 @@
+//bitwise or - to switch a particular bit
 #include<stdio.h>
 int main()
 {
@@ -9,3 +10,9 @@ int main()
 	printf("after switching on 5th bit,the value of a is:\n");
 	printf("a = %d\t",a);
 } 
+/*output:
+enter an integer:
+5
+a=5     after switching on 5th bit,the value of a is:
+a = 37
+*/
