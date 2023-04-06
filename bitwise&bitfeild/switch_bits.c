@@ -13,3 +13,9 @@ int main()
 	}
 	printf("%d\t",a);
 }
+/*output:
+$ ./switch_bits
+enter the value of integer:
+5
+5       65535
+*/
