@@ -10,4 +10,8 @@ int main()
 	a = a^mask;
 	printf("a = %d\t",a);
 }
-	
+/*output:
+enter the integer:
+5
+a = 5   a = 7   a = 5
+*/
