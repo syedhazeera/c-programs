@@ -21,3 +21,10 @@ int bit_pattern(int a)
 	}
 	printf("\n");
 }
+/*output:
+$ ./bin_pattern
+enter an integer:
+5
+0000000000000101
+
+*/
