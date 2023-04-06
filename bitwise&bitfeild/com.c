@@ -9,3 +9,9 @@ int main()
 	printf("after switching off the 5th bit,the value of a is :\n ");
 	printf("a=%d\t",a);
 }
+/*output:
+enter the integer:
+5
+a = 5   after switching off the 5th bit,the value of a is :
+ a=5
+*/
