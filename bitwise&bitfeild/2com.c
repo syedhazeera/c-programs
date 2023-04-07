@@ -19,3 +19,10 @@ int main()
 	printf("twos complement is :%d\n",num);
 return 0;
 }
+/*output:
+$ ./2com
+enter a number:
+5
+twos complement is :twos complement is :65531
+
+*/
