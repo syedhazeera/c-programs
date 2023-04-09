@@ -53,3 +53,63 @@ int main()
 	}
 	}
 }
+/*output:
+$ ./queue
+enter the choice of operation
+1.insert
+2.delete
+3.display
+1
+enter the item
+1
+enter the choice of operation
+1.insert
+2.delete
+3.display
+1
+enter the item
+2
+enter the choice of operation
+1.insert
+2.delete
+3.display
+1
+enter the item
+3
+enter the choice of operation
+1.insert
+2.delete
+3.display
+1
+enter the item
+4
+enter the choice of operation
+1.insert
+2.delete
+3.display
+3
+queue:
+contents of the queue are 1
+contents of the queue are 2
+contents of the queue are 3
+contents of the queue are 4
+enter the choice of operation
+1.insert
+2.delete
+3.display
+2
+element deleted is 1
+enter the choice of operation
+1.insert
+2.delete
+3.display
+3
+queue:
+contents of the queue are 2
+contents of the queue are 3
+contents of the queue are 4
+enter the choice of operation
+1.insert
+2.delete
+3.display
+*/
