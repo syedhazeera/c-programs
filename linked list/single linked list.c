@@ -191,3 +191,118 @@ void search(int data)
     if (ptr==NULL)
         printf("Item %d not found in list\n", data);
 }
+/*output:
+$ ./'single linked list'
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice
+
+LENOVO@DESKTOP-KCFUUP4 ~/linked list
+$ gcc 'single linked list.c' -o 'single linked list'
+
+LENOVO@DESKTOP-KCFUUP4 ~/linked list
+$ ./'single linked list'
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 1
+How many nodes you want 3
+Enter the element :4
+Enter the element :5
+Enter the element :7
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 5
+List is :
+4 5 7
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 2
+Enter the element : 3
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 5
+List is :
+3 4 5 7
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 3
+Enter the element:  5
+Enter the position after which this element is to be inserted 2
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 5
+List is :
+3 4 5 5 7
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 6
+Enter the element to be searched :5
+Item 5 found at position 3
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 4
+Enter the element for deletion:5
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice 5
+List is :
+3 4 5 7
+ 1.Create List
+2.Add at begining
+3.Add after
+4.Delete
+5.Display
+6.Search
+7.Quit
+Enter your choice
+*/
