@@ -99,3 +99,83 @@ int main()
 	}
 }
 }
+/*output:
+$ ./tree
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+25
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+15
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+43
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+30
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+46
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+9
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+1
+17
+enter the element to be inserted:
+
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+2
+5
+9       15      17      25      30      43      46
+1.inserting
+2.inorder
+3.post order
+4.pre order
+enter your choice of operation
+*/
