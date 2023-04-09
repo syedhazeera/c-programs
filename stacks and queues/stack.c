@@ -60,5 +60,55 @@ int main()
 	}
 	}
 }
-		
+/*output:
+$ ./stack
+enter your choice of operation
+1.push
+2.pop
+3.display
+1
+enter the item to be inserted
+1
+enter your choice of operation
+1.push
+2.pop
+3.display
+1
+enter the item to be inserted
+2
+enter your choice of operation
+1.push
+2.pop
+3.display
+1
+enter the item to be inserted
+3
+enter your choice of operation
+1.push
+2.pop
+3.display
+3
+contents of the stack
+1
+2
+3
+enter your choice of operation
+1.push
+2.pop
+3.display
+2
+poped item is3
+enter your choice of operation
+1.push
+2.pop
+3.display
+3
+contents of the stack
+1
+2
+enter your choice of operation
+1.push
+2.pop
+3.display
+*/		
 
