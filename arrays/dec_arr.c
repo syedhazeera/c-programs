@@ -15,5 +15,9 @@ int main()
 	for(j=i-1;j>=0;j--)
 		printf("%d",arr[j]);
 }
-	
+/*output:
+$ ./dec_arr
+enter the decimal number:5
+binary number is :101
+*/
 		
