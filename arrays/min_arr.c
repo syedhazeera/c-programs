@@ -12,3 +12,8 @@ int main()
 	}
 	printf("minimum = %d,maximum=%d", min,max);
 }
+/*output:
+$ ./min_max
+minimum = 0,maximum=34
+
+*/
