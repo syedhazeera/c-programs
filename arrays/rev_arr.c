@@ -13,3 +13,10 @@ int main()
 	printf("%d\t",arr[i]);
 	printf("\n");
 }
+/*output:
+$ ./rev_arr
+after reversing the array :
+10      9       8       7       6       5       4       3       2       1
+
+
+*/
