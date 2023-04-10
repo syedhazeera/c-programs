@@ -18,3 +18,16 @@ for(i=0;i<n;i++)
 }
 return 0;
 }
+/*output:
+$ ./2arr
+enter the matrix dimension:2
+2
+enter the 2 2
+1
+2
+3
+4
+the given matrix is :
+ 1 2
+ 3 4
+*/
