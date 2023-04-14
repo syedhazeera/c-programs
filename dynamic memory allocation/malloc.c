@@ -14,3 +14,6 @@ void main()
 	printf("string is %s\n",str);
 	free(str);
 }
+
+/*OUTPUT:
+string is hello*/
