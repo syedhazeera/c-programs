@@ -35,3 +35,12 @@ int main()
 	traverse(head);
 return 0;
 }
+
+/*output:
+$ ./insert_beginning
+20
+15
+10
+5
+
+*/
