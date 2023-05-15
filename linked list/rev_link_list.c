@@ -1,135 +1,88 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node 
-{
-    int num;                    //Data of the node
-    struct node *nextptr;       //Address of the node
-}*stnode;
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
 
-void createNodeList(int n);     //function to create the list
-void reverseDispList();         //function to convert the list in reverse
-void displayList();             //function to display the list
+// Function to insert a node at the beginning of the linked list
+void insertAtBeginning(struct Node** head, int newData) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = newData;
+    newNode->next = *head;
+    *head = newNode;
+}
 
-int main()
-{
-    int n;
-		
-		
-    printf(" Input the number of nodes : ");
-    scanf("%d", &n);
-    createNodeList(n);
-    printf("\n Data entered in the list are : \n");		
-    displayList();
-    reverseDispList();
-    printf("\n The list in reverse are :  \n");
-    displayList();
+// Function to reverse the linked list
+void reverseLinkedList(struct Node** head) {
+    struct Node* prev = NULL;
+    struct Node* current = *head;
+    struct Node* next = NULL;
+
+    while (current != NULL) {
+        // Store the next node
+        next = current->next;
+        
+        // Reverse the link
+        current->next = prev;
+        
+        // Move prev and current one step forward
+        prev = current;
+        current = next;
+    }
+
+    // Update the head of the linked list
+    *head = prev;
+}
+
+// Function to display the linked list
+void display(struct Node* head) {
+    if (head == NULL) {
+        printf("List is empty.\n");
+        return;
+    }
+
+    struct Node* current = head;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+
+int main() {
+    // Create a sample linked list
+    struct Node* head = NULL;
+    insertAtBeginning(&head, 3);
+    insertAtBeginning(&head, 2);
+    insertAtBeginning(&head, 1);
+
+    // Display the original list
+    printf("Original list: ");
+    display(head);
+
+    // Reverse the linked list
+    reverseLinkedList(&head);
+
+    // Display the reversed list
+    printf("Reversed list: ");
+    display(head);
+
+    // Free memory
+    struct Node* current = head;
+    while (current != NULL) {
+        struct Node* temp = current;
+        current = current->next;
+        free(temp);
+    }
+
     return 0;
 }
 
-void createNodeList(int n)
-{
-    struct node *fnNode, *tmp;
-    int num, i;
-    stnode = (struct node *)malloc(sizeof(struct node));
-    if(stnode == NULL) //check whether the stnode is NULL and if so no memory allocation
-    {
-        printf(" Memory can not be allocated.");
-    }
-    else
-    {
-// reads data for the node through keyboard
-        printf(" Input data for node 1 : ");
-        scanf("%d", &num);
-        stnode-> num = num;      
-        stnode-> nextptr = NULL; //Links the address field to NULL
-        tmp = stnode;
-//Creates n nodes and adds to linked list
-        for(i=2; i<=n; i++)
-        {
-            fnNode = (struct node *)malloc(sizeof(struct node));
-            if(fnNode == NULL) //check whether the fnnode is NULL and if so no memory allocation
-            {
-                printf(" Memory can not be allocated.");
-                break;
-            }
-            else
-            {
-                printf(" Input data for node %d : ", i);
-                scanf(" %d", &num);
-                fnNode->num = num;      // links the num field of fnNode with num
-                fnNode->nextptr = NULL; // links the address field of fnNode with NULL
-                tmp->nextptr = fnNode; // links previous node i.e. tmp to the fnNode
-                tmp = tmp->nextptr;
-            }
-        }
-    }
-}
-
-void reverseDispList()
-{
-    struct node *prevNode, *curNode;
- 
-    if(stnode != NULL)
-    {
-        prevNode = stnode;
-        curNode = stnode->nextptr;
-        stnode = stnode->nextptr;
- 
-        prevNode->nextptr = NULL; //convert the first node as last
- 
-        while(stnode != NULL)
-        {
-            stnode = stnode->nextptr;
-            curNode->nextptr = prevNode;
- 
-            prevNode = curNode;
-            curNode = stnode;
-        }
-        stnode = prevNode; //convert the last node as head
-    }
-}
-
-void displayList()
-{
-    struct node *tmp;
-    if(stnode == NULL)
-    {
-        printf(" No data found in the list.");
-    }
-    else
-    {
-        tmp = stnode;
-        while(tmp != NULL)
-        {
-            printf(" Data = %d\n", tmp->num);   // prints the data of current node
-            tmp = tmp->nextptr;                 // advances the position of current node
-        }
-    }
-}
-
 /*output:
-LENOVO@DESKTOP-KCFUUP4 ~/linked list
-$ gcc rev_link_list.c -o rev_link_list
-
-LENOVO@DESKTOP-KCFUUP4 ~/linked list
-$ ./rev_link_list
- Input the number of nodes :
-4
- Input data for node 1 : 1
- Input data for node 2 : 2
- Input data for node 3 : 3
- Input data for node 4 : 4
-
- Data entered in the list are :
- Data = 1
- Data = 2
- Data = 3
- Data = 4
-
- The list in reverse are :
- Data = 4
- Data = 3
- Data = 2
- Data = 1
+$ ./reverse_linklist
+Original list: 1 2 3
+Reversed list: 3 2 1
 */
