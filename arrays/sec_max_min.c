@@ -1,76 +1,41 @@
- #include <stdio.h>
-    void main ()
-    {
+#include<stdio.h>
+#include<limits.h>
  
-        int number[30];
-        int i, j, a, n, counter, average;
- 
-        printf("Enter the value of N\n");
-        scanf("%d", &n);
- 
-        printf("Enter the numbers \n");
-        for (i = 0; i < n; ++i)
-            scanf("%d", &number[i]);
- 
-        for (i = 0; i < n; ++i)
-        {
-            for (j = i + 1; j < n; ++j)
-            {
-                if (number[i] < number[j])
-                {
-                    a = number[i];
-                    number[i] = number[j];
-                    number[j] = a;
-		 }
-            }
- 
-        }
- 
-        printf("The numbers arranged in descending order are given below \n");
- 
-        for (i = 0; i < n; ++i)
-        {
-            printf("%d\n", number[i]);
-        }
- 
-        printf("The 2nd largest number is  = %d\n", number[1]);
-        printf("The 2nd smallest number is = %d\n", number[n - 2]);
- 
-        average = (number[1] + number[n - 2]) / 2;
-        counter = 0;
- 
-        for (i = 0; i < n; ++i)
-        {
-            if (average == number[i])
-		{
-                ++counter;
-            }
-        }
- 
-        if (counter == 0 )
-            printf("The average of %d  and %d is = %d is not in the array \n",
-            number[1], number[n - 2], average);
- 
-        else
-            printf("The average of %d  and %d in array is %d in numbers \n",
-            number[1], number[n - 2], counter);
-    }
-/*output:
-$ ./sec_max_min
-Enter the value of N
-4
-Enter the numbers
-2
-6
-8
-3
-The numbers arranged in descending order are given below
-8
-6
-3
-2
-The 2nd largest number is  = 6
-The 2nd smallest number is = 3
-The average of 6  and 3 is = 4 is not in the array
+int main()
+{
+	int i,arr[9] = {1,2,3,4,5,6,7,8,9};
+	
+	int largest = INT_MIN,secondlargest = INT_MIN;
+	int smallest = INT_MAX,secondsmallest = INT_MAX;
+		
+	for(i=0;i<9;i++)
+	{
+	if(arr[i]>largest)
+	{
+		secondlargest = largest;
+		largest = arr[i];
+	
+	}
+	else if(arr[i]>secondlargest && arr[i]!=largest)
+	{
+		secondlargest = arr[i];
+	}
 
+	if(arr[i]<smallest)
+	{
+		secondsmallest = smallest;
+		smallest = arr[i];
+	}
+	else if(arr[i]<secondsmallest && secondsmallest != arr[i])
+	{
+		secondsmallest = arr[i];
+	}
+
+	}
+	printf("second largest is %d and second smallest is %d",secondlargest,secondsmallest);
+return 0;
+}	
+/*output:
+$ ./7_sec_max_min
+second largest is 8 and second smallest is 2
 */
