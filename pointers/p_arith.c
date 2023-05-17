@@ -15,5 +15,15 @@ int main()
 	printf("now value of pf = %u\n",pf);
 return 0;
 }
+
+/*output:
+$ ./p_arith
+value of pi = address of a = 4294954004
+value of pc = address of b = 4294954003
+value of pf = address of c = 4294953996
+now value of pi = 4294954008
+now value of pc = 4294954004
+now value of pf = 4294954000
+*/
 	
 	
