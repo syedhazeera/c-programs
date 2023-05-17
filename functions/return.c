@@ -11,3 +11,9 @@ int display()
 	return 56;
 
 }
+
+/*output:
+$ ./return
+the value of x is 56
+
+*/
