@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-	int arr1[] = {3,4};
+	int arr1[] = {3,4};//0003 0004
 	int arr2[] = {1,2};
 	if(memchr(arr1,0,2 * sizeof(int)) != NULL )
 	{
